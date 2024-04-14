@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "outDir": "wwwroot/dist",
+    "rootDir": "./",
+    "noImplicitAny": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./ClientApp"
+  },
+  "exclude": [ "node_modules, wwwroot" ],
+  "include": [ "*.*" ]
+}

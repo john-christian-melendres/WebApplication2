@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ClientApp\Home\index.ts" />
+    <None Remove="ClientApp\Privacy\index.ts" />
+    <None Remove="ClientApp\Shared\index.ts" />
+    <None Remove="ClientApp\Shared\Shared1.ts" />
+    <None Remove="ClientApp\Shared\Shared2.ts" />
+    <None Remove="ClientApp\webpack.config.common.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\Home\index.ts" />
+    <TypeScriptCompile Include="ClientApp\Privacy\index.ts" />
+    <TypeScriptCompile Include="ClientApp\Shared\index.ts" />
+    <TypeScriptCompile Include="ClientApp\Shared\Shared1.ts" />
+    <TypeScriptCompile Include="ClientApp\Shared\Shared2.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\dist\" />
+  </ItemGroup>
+
+</Project>
