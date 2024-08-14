@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const NodeSassGlobImporter = require('node-sass-glob-importer');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 console.info('Webpack Started');
 
@@ -16,10 +17,10 @@ module.exports = {
             dependOn: 'shared',
             asyncChunks: true
         },
-        //main2: {
-        //    import: path.join(__dirname, 'ClientApp/Privacy', 'index.ts'),
-        //    //dependOn: 'shared'
-        //}
+        main2: {
+            import: path.join(__dirname, 'ClientApp/Privacy', 'index.ts'),
+            //dependOn: 'shared'
+        }
     },
     resolve: {
         modules: [__dirname, 'node_modules'],
@@ -42,6 +43,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '../dist/[name].min.css',
         }),
+        new ForkTsCheckerWebpackPlugin(),
     ],
     module: {
         rules: [

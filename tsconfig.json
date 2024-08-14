@@ -1,17 +1,26 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "outDir": "wwwroot/dist",
-    "rootDir": "./",
-    "noImplicitAny": true,
-    "allowJs": true,
-    "moduleResolution": "node",
-    "skipLibCheck": true,
+    /* Base Options: */
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": "./ClientApp"
+    "skipLibCheck": true,
+    "target": "es2022",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    /* If NOT transpiling with TypeScript: */
+    "module": "preserve",
+    "noEmit": true,
+
+    /* If your code runs in the DOM: */
+    "lib": [ "es2022", "dom", "dom.iterable" ],
   },
-  "exclude": [ "node_modules, wwwroot" ],
-  "include": [ "*.*" ]
+  "exclude": [ "node_modules" , "wwwroot"],
 }
